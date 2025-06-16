@@ -1,0 +1,25 @@
+database:
+  server: your_server_name
+  name: your_database_name
+  username: your_username
+  password: your_password
+  driver: SQL Server
+
+application:
+  baseline_dir: baselines
+  log_level: INFO
+  timeout: 30  # seconds
+
+# Optional: Define common stored procedures and their parameters
+stored_procedures:
+  GetCustomers:
+    description: "Retrieves customer information"
+    parameters: []
+  
+  GetCustomerOrders:
+    description: "Retrieves orders for a specific customer"
+    parameters:
+      - name: customer_id
+        type: int
+      - name: start_date
+        type: date 
